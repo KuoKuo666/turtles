@@ -20,7 +20,7 @@ export default class Main extends cc.Component {
 
     private newTurtle (): cc.Node {
         this.node.on(cc.Node.EventType.TOUCH_END, this.downTurtle, this);
-        
+
         let t: cc.Node = cc.instantiate(this.turtle);
         t.parent = this.turtleManager;
         t.x = 0;
@@ -45,7 +45,7 @@ export default class Main extends cc.Component {
                 this.nowTurtle = this.newTurtle();
             },1);
         } else {
-            // 寻找最低下的乌龟
+            // 寻找最底下的乌龟
             let index = this.turtleManager.childrenCount - 2;
             let bottomNode = this.turtleManager.children[index];
             // 求出位置
@@ -62,10 +62,9 @@ export default class Main extends cc.Component {
                 }
                 // 1秒后继续
                 this.scheduleOnce(() => {
-                this.nowTurtle = this.newTurtle();
+                    this.nowTurtle = this.newTurtle();
                 },1);
             }
         }
     }
-
 }

@@ -17,7 +17,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 3,
+    "_level": 2,
     "_components": [
       {
         "__id__": 2
@@ -47,7 +47,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -500,
+      "y": -78,
       "z": 0
     },
     "_scale": {
@@ -106,7 +106,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "5fLbgZ6MRACpwN+arYOydq",
+    "fileId": "0bNzZjSP5IAIe+yN0OK24Q",
     "sync": false
   }
 ]
