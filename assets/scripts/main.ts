@@ -9,8 +9,8 @@ export default class Main extends cc.Component {
 
     @property(cc.Prefab) public turtle: cc.Prefab = null;
     @property(cc.Node) public turtleManager: cc.Node = null;
-    @property({type: cc.AudioClip}) bgm: cc.AudioClip = null;
-
+    @property({type: cc.AudioClip}) public bgm: cc.AudioClip = null;
+    // 指向当前使用乌龟
     public nowTurtle: cc.Node = null;
 
     start () {
@@ -20,6 +20,7 @@ export default class Main extends cc.Component {
 
     private newTurtle (): cc.Node {
         this.node.on(cc.Node.EventType.TOUCH_END, this.downTurtle, this);
+        
         let t: cc.Node = cc.instantiate(this.turtle);
         t.parent = this.turtleManager;
         t.x = 0;
